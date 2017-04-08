@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Shader Forge/NewShader" {
     Properties {
         _scale ("scale", Range(50, 5000)) = 50
@@ -36,7 +38,7 @@ Shader "Shader Forge/NewShader" {
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 o.screenPos = o.pos;
                 return o;
             }

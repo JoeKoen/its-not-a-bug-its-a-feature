@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // This work is licensed under a Creative Commons Attribution 3.0 Unported License.
 // http://creativecommons.org/licenses/by/3.0/deed.en_GB
 //
@@ -48,7 +50,7 @@ SubShader {
 		v2f vert( appdata_img v )
 		{
 			v2f o;
-			o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos (v.vertex);
 			o.uv = v.texcoord.xy;
 			
 			return o;
