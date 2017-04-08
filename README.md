@@ -1,4 +1,4 @@
-# its-not-a-bug-its-a-feature
+# It's not a bug It's a feature
 Heartland Gaming Expo 2017 Gamejam entry, theme is "It's not a bug, it's a feature!" heartlandgamingexpo.com #hgejam2017
 
 # About this Fork
